@@ -1,0 +1,307 @@
+
+/** Global **/
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to left, Black -50% , white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+p{
+    text-shadow: 2px 0px 2px white;
+}
+section {
+    min-height: 50vh;
+    margin-bottom: 200px
+}
+.active {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.title-holder {
+    display: inline-block;
+    width: 100%;
+    padding-top: 4rem;
+}
+
+.col-3 {
+    float: left;
+    width: 25%;
+}
+.col-4 {
+    float: left;
+    width: 33.333333%;
+}
+.col-6 {
+    float: left;
+    width: 50%;
+}
+.col-12 {
+    width: 100%;
+}
+/** ./Global **/
+
+
+/** Header **/
+#header {
+    min-height: 140px;
+    padding: 15px;
+    background: linear-gradient( to left, rgba(0,0,0,0), rgb(255, 255, 255) ),url(../../images/default/muska-odela.jpg);
+    background-size: cover;
+    border-bottom: 3px solid #66023c;
+    z-index: 10;
+}
+
+#header .logo-holder, 
+.footer .logo-holder {
+    height: 120px;
+    display: inline-block;
+}
+#header .logo-holder .logo, 
+.footer .logo-holder .logo {
+    height: 100%;
+}
+#header .menu{
+    display: inline-block;
+    top: 82px;
+}
+ 
+#header .menu ul {
+    display: inline-flex;
+    list-style: none;
+    margin: auto;
+}
+#header .menu ul li{
+  display: inline-block;
+  list-style: none;
+}
+#header .menu .menu-item a {
+    padding: 15px 5px;
+    margin-right: 100px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--text-color);
+}
+#header .menu .menu-item a:visited {
+    color: var(--text-color);
+}
+#header .menu .menu-item a:hover,
+#header .menu .menu-item a:focus,
+#header .menu .menu-item a:active,
+#header .menu .menu-item a.active {
+    color: #66023c;
+}
+/* Social networks */
+.general_info .icon a i{
+    color: white;
+}
+.general_info .social_container{
+    display: flex;
+    float: right;
+    margin-right: 50px;
+}
+.general_info .social_container .icon {
+    margin-left: 20px;
+}
+
+/*./ Social networks */
+
+/* general_info */
+.general_info{
+    display: flex;
+    background-color: black;
+}
+.general_info .icon{
+    margin: auto;
+  
+}
+
+.social_container .icon a i {
+    color: white;
+}
+/* general_info */
+.social_container .icon{
+    text-shadow: 5px -1px 9px black;
+}
+/*./ Header */
+
+
+/*title*/
+.title_holder{
+    display: block;
+    margin-bottom: 50px;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+
+/**  Contact form and location - ContactUs page  **/
+.section-contact{
+    display:inline-block;
+    margin-bottom:20px;
+}
+.section-contact .fancy-form{
+    padding:15px;
+}
+.section-contact .contact-form{
+    display:inline-block;
+    padding: 15px;
+}
+.section-contact .contact-form .form-item{
+    margin-bottom:25px;
+    display: block;
+    font-size: 16px;
+}
+.section-contact .contact-form .form-item .js-error{
+    color: red;
+    font-size: 14px;
+    float: right;
+    margin-right: 89px;
+}
+.section-contact .contact-form .form-item input{
+    width: 84%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+.section-contact .contact-form .form-item input:focus{
+    border-bottom: 2px solid #66023c;
+}
+.section-contact .contact-form .form-item textarea{
+    display: block;
+    width:84%;
+    outline: none;
+}
+.section-contact .contact-form .form-item textarea:focus{
+    border: 2px solid #66023c;
+}
+.section-contact .section-location{
+    padding: 15px;
+}
+.section-contact .section-location .map-holder{
+    padding: 15px;
+}
+.section-contact .section-location .map-holder iframe{
+    width:100%;
+    height:400px;
+}
+/**  ./Contact form and location - ContactUs page  **/
+
+/**  footer  **/
+.footer{
+    display:inline-block;
+    width:100%;
+    border-top:2px solid #66023c;
+}
+.footer .footer-item{
+    padding-left:10px;
+}
+.footer .footer-item .footer-logo img{
+    width: 54%;
+    padding-top:20px;   
+}
+.footer .footer-item .footer-aboutUs{
+    font-family: Brush Script MT, Brush Script Std, cursive;   
+    font-size: 30px;
+    margin: 15px;
+}
+.footer .footer-item ul{
+    float:left;
+    list-style-type: none;
+    padding:0px;
+}
+.footer .footer-item li{
+    padding:7px;
+    color:black;
+}
+.footer .footer-item li a:hover{
+    cursor: pointer;
+    color:#66023c;
+}
+.footer .footer-item ul li .fa{
+    color:black;
+}
+.footer .footer-item ul li:first-child{
+    color:#66023c;
+    font-size:17px;
+    font-weight: bold;
+}
+.footer .footer-item .footer-info ul li:last-child{
+    font-size: 30px;
+    float:right;
+}
+.footer .footer-item .footer-info ul li a:hover{
+    color:#66023c;
+}
+/**  ./footer  **/
+
+/* Large divice - lg */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .hide-lg {
+        display: none;
+    }
+
+    .col-lg{
+        width: 25%;
+        margin-left: 6%;
+    }
+
+    .about_us{
+        width:40%; 
+        display: inline-block;
+    }
+    .about_us .images{
+        width: 60%;
+    }
+}
+/* medium divice - md */
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    .hide-md {
+        display: none;
+    }
+    .col-md-6 {
+        width: 33%;
+    }
+    .about_us{
+        width:50%; 
+        display: inline-block;
+    }
+    .about_us_holder .images{
+        width: 50%;
+        overflow: hidden;
+    }
+
+}
+/* extra small divice - xs */
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .form_holder, section-location{
+        width: 100%
+    }
+    .section-contact .contact-form,
+    .section-contact .section-location{
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+

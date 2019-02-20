@@ -1,0 +1,569 @@
+
+/** Global **/
+html, body {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to left, Black -50% , white);
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+    min-height: 50vh;
+    margin-bottom: 200px
+}
+.active {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.title-holder {
+    display: inline-block;
+    width: 100%;
+    padding-top: 4rem;
+}
+
+.col-3 {
+    float: left;
+    width: 25%;
+}
+.col-4 {
+    float: left;
+    width: 33.333333%;
+}
+.col-6 {
+    float: left;
+    width: 50%;
+}
+.col-12 {
+    width: 100%;
+}
+/** ./Global **/
+
+
+
+/** Header **/
+#header {
+    min-height: 140px;
+    padding: 15px;
+    background: linear-gradient( to left, rgba(0,0,0,0), rgb(255, 255, 255) ),url(../images/default/muska-odela.jpg);
+    background-size: cover;
+    border-bottom: 3px solid #66023c;
+    z-index: 10;
+}
+
+#header .logo-holder, 
+.footer .logo-holder {
+    height: 120px;
+    display: inline-block;
+}
+#header .logo-holder .logo, 
+.footer .logo-holder .logo {
+    height: 100%;
+}
+#header .menu{
+    display: inline-block;
+    top: 82px;
+}
+ 
+#header .menu ul {
+    display: inline-flex;
+    list-style: none;
+    margin: auto;
+}
+#header .menu ul li{
+  display: inline-block;
+  list-style: none;
+}
+#header .menu .menu-item a {
+    padding: 15px 5px;
+    margin-right: 100px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--text-color);
+}
+#header .menu .menu-item a:visited {
+    color: var(--text-color);
+}
+#header .menu .menu-item a:hover,
+#header .menu .menu-item a:focus,
+#header .menu .menu-item a:active,
+#header .menu .menu-item a.active {
+    color: #66023c;
+}
+/* Social networks */
+.general_info .social_container{
+    display: flex;
+    float: right;
+    margin-right: 50px;
+}
+.general_info .social_container .icon {
+    margin-left: 20px;
+}
+
+/*./ Social networks */
+
+/* general_info */
+.general_info{
+    display: flex;
+    background-color: black;
+}
+.general_info .icon{
+    margin: auto;
+  
+}
+.general_info .icon a i{
+    color: white;
+}
+.social_container .icon a i{
+    color: white;
+}
+/* general_info */
+.social_container .icon{
+    text-shadow: 5px -1px 9px black;
+}
+/*./ Header */
+
+
+/* SLIDER */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .slideshow-container .mySlides img{
+    height: 80vh;
+    margin-left: 30%;
+  }
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 30px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 10px;
+    user-select: none;
+  }
+  .prev{
+      color: black;
+      
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #66023c;
+  }
+  
+  /* Caption text */
+  .mySlides .text {
+    color: #f2f2f2;
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/5 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+/*./ SLIDER */
+
+
+
+/* Thumbinal galery */
+/** Gallery **/
+.gallery {
+    position: relative;
+        display: inline-block;
+    width: 100%;
+}
+.gallery .item {
+    display: inline-block;
+    position: relative;
+}
+.gallery .item .thumb {
+    min-height: 360px;
+    margin: 15px;
+    border: 1px solid #66023c;
+}
+.gallery .item .marker {
+    color: #66023c;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    text-shadow: 2px 2px 1px white;
+}
+.gallery .item .thumb .image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+.gallery .item .thumb .image .img-fluid {
+    width: 100%;
+    max-width: initial;
+    position: absolute;
+}
+.gallery .item .thumb .title {
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.gallery .item .thumb .marker h1{
+    font-weight: 700;
+}
+.gallery .item .thumb .marker h1{
+    margin-top: -10px;
+}
+.gallery .item .thumb .description {
+    margin: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+#section-gallery .load-more {
+    text-align: center;
+}
+#section-gallery .title-holder h1{
+    text-align: center;
+    color: var(--main-color);
+}
+#section-gallery .load-more .btn {
+    padding: 10px;
+    border: 1px solid #66023c;
+    border-radius: 10px;
+    color: white;
+    background-color: #66023c;
+    font-size: 20px;
+    transition: 1s;
+    box-shadow: 4px 4px 4px 2px black;
+}
+#section-gallery .load-more .btn:hover {
+    background-color: white;
+    color: #66023c;
+    border: 1px solid #66023c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+/** ./Gallery **/
+
+/*./ Thumbinal galery */
+
+/* about us */
+.about_us .title{
+    text-align: center;
+ }
+ 
+ .about_us_holder .about_us .text{
+     font-size: 20px;
+     border: 2px solid #66023c;
+     border-radius: 10px;
+     display: flex;
+     margin-left: 10px;
+     padding: 10px;
+     text-align: center;
+ }
+ .about_us_holder .images {
+     display: flex;
+     float: right;
+     width: 60%;
+    
+     
+ }
+ .about_us_holder .images .image{
+     width: 33%;
+ }
+ .about_us_holder .images .image img:hover{
+    transform: scale(1.5);
+    transition: 1s;
+ }
+ .about_us_holder .images .image img{
+     height: 300px;
+     display: flex;
+     border: 2 px solid #66023c;
+     margin-right: 100px;
+     transition: 1s;
+ }
+ 
+ /*./ about us */
+ 
+ /* Contact form */
+ #section-contact{
+     display: block;
+     text-align: center;
+     width: 70%;
+     margin: auto;
+ }
+ #section-contact button{
+     padding: 10px;
+     border-radius: 10px;
+     color: white;
+     background-color: #66023c;
+     font-size: 20px;
+     transition: 1s;
+     box-shadow: 4px 4px 4px 2px black;
+ }
+ 
+ #section-contact button:hover{
+     background-color: white;
+     color: #66023c;
+     border: 1px solid #66023c;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: 1s;
+ }
+ /*./ Contact form */
+ 
+ /**  footer  **/
+.footer{
+    display:inline-block;
+    width:100%;
+    border-top:2px solid #66023c;
+}
+.footer .footer-item{
+    padding-left:10px;
+}
+.footer .footer-item .footer-logo img{
+    width: 54%;
+    padding-top:20px;   
+}
+.footer .footer-item .footer-aboutUs{
+    font-family: Brush Script MT, Brush Script Std, cursive;   
+    font-size: 30px;
+    margin: 15px;
+}
+.footer .footer-item ul{
+    float:left;
+    list-style-type: none;
+    padding:0px;
+}
+.footer .footer-item li{
+    padding:7px;
+    color:black;
+}
+.footer .footer-item li a:hover{
+    cursor: pointer;
+    color:#66023c;
+}
+.footer .footer-item ul li .fa{
+    color:black;
+}
+.footer .footer-item ul li:first-child{
+    color:#66023c;
+    font-size:17px;
+    font-weight: bold;
+}
+.footer .footer-item .footer-info ul li:last-child{
+    font-size: 30px;
+    float:right;
+}
+.footer .footer-item .footer-info ul li a:hover{
+    color:#66023c;
+}
+/**  ./footer  **/
+
+/* Large divice - lg */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .hide-lg {
+        display: none;
+    }
+   
+    .col-lg{
+        width: 18%;
+        margin-left: 6%;
+    }
+
+    .about_us{
+        width:40%; 
+        display: inline-block;
+    }
+    .about_us .images{
+        width: 60%;
+    }
+}
+/* medium divice - md */
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    .hide-md {
+        display: none;
+    }
+    .col-md-6 {
+        width: 33%;
+    }
+    .about_us{
+        width:50%; 
+        display: inline-block;
+    }
+    .about_us_holder .images{
+        width: 50%;
+        overflow: hidden;
+    }
+    #header .general_info, 
+    #header .menu{
+        display: contents;
+        text-align: center;
+    }
+    #header .logo-holder{
+        margin:auto;
+    }
+    #header .menu{
+        text-align: center;
+    }
+    
+    .general_info .icon{
+        text-shadow: 3px 1px #66023c;
+    }
+    .w3-content{
+        margin-top: 50px;
+    }
+    .social_container{
+        float: left;
+    }
+    .footer .onama{
+        display: block;
+        text-align: center;
+    }
+    .footer .logo-holder{
+        display: block;
+
+    }
+}
+/* extra small divice - xs */
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  
+
+    .hide-xs {
+        display: none;
+    }
+    .col-xs-12 {
+        width: 100%;
+    }
+    .about_us{
+        width:100%; 
+        display: block;
+    }
+    .about_us_holder .images{
+        width: 100%;
+        overflow: hidden;
+    }
+    
+  
+    #header .logo-holder{
+        display: block;
+        text-align: center;
+    }
+  
+    #header .menu{
+        display: contents;
+        text-align: center;
+    }
+    #header .menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .general_info{
+        display: inline-grid;
+        background-color: black;
+        width: 100%;
+    }
+    .general_info .social_container{
+        
+        width: 100%;
+    }
+    .general_info .social_container .icon {
+        margin-left: auto;
+    }
+   
+    .w3-content{
+        margin-top: 100px;
+    }
+    .footer .logo-holder{
+        margin-left: 30%;
+        display: block;
+    }
+    
+    
+}
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  
+    #header .logo-holder{
+        display: block;
+        text-align: center;
+    }
+    #header .menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
